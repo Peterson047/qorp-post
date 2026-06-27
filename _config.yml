@@ -1,0 +1,50 @@
+# Configuração do Blog
+title: Qorp Blog
+description: Um blog clean e focado em leitura
+author: Peterson Alves
+
+# Configurações do GitHub Pages
+baseurl: ""
+url: "https://peterson.github.io"
+# Se seu repo for qorp-post, use:
+# url: "https://peterson.github.io/qorp-post"
+
+# Configurações de build
+markdown: kramdown
+theme: minima
+highlighter: rouge
+
+# Exibir posts por página
+paginate: 10
+
+# Configurações de plugins
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Suporte a imagens
+# Coloque suas imagens em assets/images/
+# E referencie assim: ![alt]({{ site.baseurl }}/assets/images/nome.jpg)
+
+# Configurações de estilo (overrides do tema Minima)
+minima:
+  date_format: "%d %b %Y"
+
+# Excluir arquivos
+exclude:
+  - README.md
+  - .gitignore
+  - _bmad
+  - design-artifacts
+  - docs
+  - .agent
+
+# Markdown settings
+kramdown:
+  auto_ids: true
+  input: GFM
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
