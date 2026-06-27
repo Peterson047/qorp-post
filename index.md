@@ -1,9 +1,9 @@
 ---
 layout: home
-title: Qorp Blog
+title: Qorp Post
 ---
 
-Bem-vindo ao **Qorp Blog** — um espaço dedicado a compartilhar conhecimento sobre desenvolvimento, inteligência artificial e as nuances da carreira em tecnologia.
+Bem-vindo ao **Qorp Post** — um espaço dedicado a compartilhar conhecimento sobre desenvolvimento, inteligência artificial e as nuances da carreira em tecnologia.
 
 Aqui você encontra artigos sobre:
 

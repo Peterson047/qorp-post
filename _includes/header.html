@@ -1,0 +1,39 @@
+<!-- Qorp Post Header — Navigation destacada -->
+<header class="qorp-header" role="banner">
+  <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+
+  <div class="qorp-header-container">
+    <!-- Logo/Brand -->
+    <a href="{{ '/' | relative_url }}" class="qorp-brand">
+      <span class="qorp-brand-text">Qorp<span class="qorp-brand-accent">Post</span></span>
+    </a>
+
+    <!-- Navigation Toggle (Mobile) -->
+    <input type="checkbox" id="qorp-nav-toggle" class="qorp-nav-toggle">
+    <label for="qorp-nav-toggle" class="qorp-nav-button">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <!-- Navigation Links -->
+    <nav class="qorp-nav">
+      <a href="{{ '/' | relative_url }}" class="qorp-nav-link {% if page.layout == 'home' %}active{% endif %}">
+        <span class="qorp-nav-icon">🏠</span>
+        <span class="qorp-nav-text">Home</span>
+      </a>
+      <a href="{{ '/arquivo' | relative_url }}" class="qorp-nav-link">
+        <span class="qorp-nav-icon">📚</span>
+        <span class="qorp-nav-text">Arquivo</span>
+      </a>
+      <a href="{{ '/sobre' | relative_url }}" class="qorp-nav-link">
+        <span class="qorp-nav-icon">👤</span>
+        <span class="qorp-nav-text">Sobre</span>
+      </a>
+      <a href="{{ '/feed.xml' | relative_url }}" class="qorp-nav-link">
+        <span class="qorp-nav-icon">📡</span>
+        <span class="qorp-nav-text">RSS</span>
+      </a>
+    </nav>
+  </div>
+</header>
