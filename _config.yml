@@ -1,7 +1,8 @@
 # Configuração do Blog
 title: Qorp Blog
-description: Um blog clean e focado em leitura
+description: Um blog clean e focado em leitura agradável sobre desenvolvimento e tecnologia
 author: Peterson Alves
+lang: pt-BR
 
 # Configurações do GitHub Pages
 baseurl: "/qorp-post"
@@ -38,6 +39,9 @@ exclude:
   - design-artifacts
   - docs
   - .agent
+  - Gemfile
+  - Gemfile.lock
+  - GUIA_RAPIDO.md
 
 # Markdown settings
 kramdown:
@@ -46,3 +50,9 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
+  syntax_highlighter_opts:
+    default_lang: javascript
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false

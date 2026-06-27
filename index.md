@@ -1,15 +1,16 @@
 ---
 # Página index
 layout: home
-title: Qorp Blog
+title: Início
 ---
 
-<h1>Bem-vindo ao Qorp Blog</h1>
+Bem-vindo ao **Qorp Blog** — um espaço dedicado a compartilhar conhecimento sobre desenvolvimento, arquitetura, carreira e tecnologia.
 
-<p>Um blog simples e focado em leitura agradável.</p>
+Aqui você encontra artigos sobre:
 
----
+- **Desenvolvimento Web**: JavaScript, React, Node.js
+- **DevOps & Cloud**: Docker, Kubernetes, CI/CD
+- **Arquitetura**: Clean Architecture, DDD, Design Patterns
+- **Carreira**: Reflexões e lições aprendidas
 
-## Posts Recentes
-
-Verifique a seção de posts no menu para ler os artigos mais recentes.
+Explore os artigos abaixo! 👇

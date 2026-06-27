@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div class="home">
+  <h1 class="page-heading">{{ page.title }}</h1>
+  {{ content }}
+
+  {% if site.posts.size > 0 %}
+    <h2 class="post-list-heading">Artigos</h2>
+    <ul class="post-list">
+      {% for post in site.posts %}
+        <li>
+          <a href="{{ post.url | relative_url }}" class="post-link">{{ post.title | escape }}</a>
+          <span class="post-meta">{{ post.date | date: "%d %b %Y" }}</span>
+          {% if post.categories %}
+            <span class="post-meta">• {{ post.categories | join: ", " }}</span>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+
+    <p class="feed-subscribe">
+      <a href="{{ '/feed.xml' | relative_url }}">RSS Feed</a>
+    </p>
+  {% endif %}
+</div>
