@@ -1,0 +1,277 @@
+/* Qorp Post — Minimalista estilo Medium/Substack */
+
+@import url('https://fonts.googleapis.com/css2?family=Literata:wght@400;500&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --black: #121212;
+  --gray-900: #1a1a1a;
+  --gray-600: #525252;
+  --gray-400: #a3a3a3;
+  --gray-200: #e5e5e5;
+  --gray-100: #f5f5f5;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Literata', Georgia, serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--black);
+  background: var(--white);
+}
+
+/* === HEADER === */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.header-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9375rem;
+  color: var(--gray-600);
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--black);
+}
+
+/* === LAYOUT === */
+.wrapper {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.page-content {
+  padding: 2rem 0 4rem;
+  min-height: calc(100vh - 200px);
+}
+
+/* === HOME === */
+.home h1 {
+  font-family: 'Literata', serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.home p {
+  color: var(--gray-600);
+  margin-bottom: 1.5rem;
+  font-size: 1.0625rem;
+}
+
+/* === POST LIST === */
+.post-list-heading {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gray-600);
+  margin-bottom: 1rem;
+}
+
+.post-list {
+  list-style: none;
+}
+
+.post-list li {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.post-link {
+  font-family: 'Literata', serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--black);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.375rem;
+}
+
+.post-link:hover {
+  color: var(--gray-600);
+}
+
+.post-meta {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8125rem;
+  color: var(--gray-600);
+}
+
+/* === POST PAGE === */
+.post-header {
+  margin-bottom: 2rem;
+}
+
+.post-title {
+  font-family: 'Literata', serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  color: var(--black);
+}
+
+.post-content p {
+  margin-bottom: 1.25rem;
+}
+
+.post-content a {
+  color: var(--black);
+  text-decoration: underline;
+}
+
+.post-content h2 {
+  font-family: 'Literata', serif;
+  font-size: 1.625rem;
+  font-weight: 400;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.post-content h3 {
+  font-family: 'Literata', serif;
+  font-size: 1.375rem;
+  font-weight: 400;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-content code {
+  font-family: 'SF Mono', Monaco, monospace;
+  background: var(--gray-100);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.post-content pre {
+  background: var(--gray-100);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.post-content pre code {
+  background: none;
+  padding: 0;
+}
+
+.post-content blockquote {
+  border-left: 3px solid var(--gray-200);
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+  color: var(--gray-600);
+}
+
+.post-content ul,
+.post-content ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.post-content li {
+  margin-bottom: 0.375rem;
+}
+
+/* === FOOTER === */
+.site-footer {
+  border-top: 1px solid var(--gray-200);
+  padding: 2rem 0;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.site-footer p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+.site-footer a {
+  color: var(--gray-600);
+  text-decoration: underline;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+  body {
+    font-size: 17px;
+  }
+
+  .header-container {
+    padding: 0.875rem 1rem;
+  }
+
+  .site-nav {
+    gap: 1rem;
+  }
+
+  .nav-link {
+    font-size: 0.875rem;
+  }
+
+  .post-title {
+    font-size: 1.875rem;
+  }
+
+  .home h1 {
+    font-size: 1.875rem;
+  }
+}
+
+/* === SCROLLBAR === */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-400);
+  border-radius: 3px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,26 +1,10 @@
-<!-- Qorp Post Header -->
-<header class="qorp-header" role="banner">
-  <a href="#main-content" class="qorp-skip-link">Pular para o conteúdo</a>
-
-  <div class="qorp-header-inner">
-    <!-- Logo -->
-    <a href="{{ '/' | relative_url }}" class="qorp-logo">
-      Qorp<span class="qorp-logo-accent">Post</span>
-    </a>
-
-    <!-- Navigation -->
-    <nav class="qorp-nav">
-      <a href="{{ '/' | relative_url }}" class="qorp-nav-link">Home</a>
-      <a href="{{ '/arquivo' | relative_url }}" class="qorp-nav-link">Arquivo</a>
-      <a href="{{ '/sobre' | relative_url }}" class="qorp-nav-link">Sobre</a>
-      <a href="{{ '/feed.xml' | relative_url }}" class="qorp-nav-link">RSS</a>
+<header class="site-header">
+  <div class="header-container">
+    <a href="{{ '/' | relative_url }}" class="site-title">Qorp Post</a>
+    <nav class="site-nav">
+      <a href="{{ '/' | relative_url }}" class="nav-link">Home</a>
+      <a href="{{ '/arquivo' | relative_url }}" class="nav-link">Arquivo</a>
+      <a href="{{ '/sobre' | relative_url }}" class="nav-link">Sobre</a>
     </nav>
-
-    <!-- Mobile Toggle -->
-    <button class="qorp-menu-toggle" aria-label="Menu" onclick="document.querySelector('.qorp-nav').classList.toggle('qorp-nav-open')">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
   </div>
 </header>

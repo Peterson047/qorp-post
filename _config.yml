@@ -6,7 +6,7 @@ lang: pt-BR
 
 # Configurações do GitHub Pages
 baseurl: "/qorp-post"
-url: "https://peterson047.github.io"
+url: "https://peterson047.github.io/qorp-post"
 
 # Configurações de build
 markdown: kramdown
