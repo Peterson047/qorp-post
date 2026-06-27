@@ -4,10 +4,8 @@ description: Um blog clean e focado em leitura
 author: Peterson Alves
 
 # Configurações do GitHub Pages
-baseurl: ""
-url: "https://peterson.github.io"
-# Se seu repo for qorp-post, use:
-# url: "https://peterson.github.io/qorp-post"
+baseurl: "/qorp-post"
+url: "https://peterson047.github.io"
 
 # Configurações de build
 markdown: kramdown
