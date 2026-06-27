@@ -10,7 +10,9 @@ layout: default
         {{ page.date | date: "%d %b %Y" }}
       </time>
       {% if page.categories %}
-        • {% for cat in page.categories %}<span itemprop="articleSection">{{ cat }}</span>{% unless forloop.last %}, {% endunless %}{% endfor %}
+        {% for cat in page.categories %}
+          <span> • </span><span itemprop="articleSection">{{ cat }}</span>
+        {% endfor %}
       {% endif %}
     </p>
   </header>
@@ -20,11 +22,11 @@ layout: default
   </div>
 
   {% if page.tags %}
-  <footer class="post-tags">
-    <p style="font-family: 'Inter', sans-serif; font-size: 0.8rem; color: var(--text-secondary); margin-top: 3rem;">
+  <footer style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--gray-300);">
+    <p style="font-family: var(--font-sans); font-size: var(--text-xs); color: var(--gray-600); text-transform: uppercase; letter-spacing: 0.05em;">
       Tags:
       {% for tag in page.tags %}
-        <span style="background: var(--bg-secondary); padding: 0.2rem 0.5rem; border-radius: 3px; margin-right: 0.5rem;">{{ tag }}</span>
+        <span style="display: inline-block; background: var(--gray-100); padding: 0.2rem 0.5rem; border-radius: var(--radius-sm); margin-right: 0.5rem;">{{ tag }}</span>
       {% endfor %}
     </p>
   </footer>
