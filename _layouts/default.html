@@ -21,8 +21,13 @@
   </main>
 
   <footer class="site-footer">
-    <div class="wrapper">
-      <p>© {{ site.time | date: "%Y" }} {{ site.author }}</p>
+    <div class="footer-inner">
+      <span class="footer-text">&copy; {{ site.time | date: "%Y" }} {{ site.author }}</span>
+      <div class="footer-links">
+        <a href="{{ '/' | relative_url }}">Blog</a>
+        <a href="{{ '/servicos' | relative_url }}">Serviços</a>
+        <a href="{{ '/sobre' | relative_url }}">Sobre</a>
+      </div>
     </div>
   </footer>
 </body>

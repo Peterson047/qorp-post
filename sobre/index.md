@@ -3,25 +3,24 @@ layout: default
 title: Sobre
 ---
 
-# Sobre o Qorp Blog
+<div class="page-header">
+  <h1>Sobre</h1>
+</div>
 
-Qorp Blog é um espaço dedicado a compartilhar reflexões e tutoriais sobre desenvolvimento de software, inteligência artificial e carreira na tecnologia.
+<div class="about-content">
+  <p>Sou Peterson Alves — desenvolvedor de software com foco em arquitetura, IA e infraestrutura. Escrevo sobre o que aprendo e construo ferramentas que uso no dia a dia.</p>
 
-## Sobre Mim
+  <h2>O que faço</h2>
+  <ul>
+    <li><strong>Desenvolvimento de software</strong> — aplicações web, APIs e automações com foco em qualidade e manutenibilidade</li>
+    <li><strong>Consultoria técnica</strong> — revisão de arquitetura, código e processos para equipes</li>
+    <li><strong>Infraestrutura</strong> — CI/CD, containers, deploy e monitoramento</li>
+    <li><strong>IA aplicada</strong> — integração de LLMs e automação inteligente</li>
+  </ul>
 
-Desenvolvedor apaixonado por tecnologia, escritor ocasional sobre arquitetura, IA e as nuances da carreira em desenvolvimento.
+  <h2>O que escrevo</h2>
+  <p>Aqui no blog compartilho tutoriais práticos, reflexões sobre carreira e análises de tendências em desenvolvimento e IA. Sem rodeio, sem floreio — conteúdo que eu gostaria de ter encontrado quando estava aprendendo.</p>
 
-## O Que Você Vai Encontrar Aqui
-
-- **Artigos opinativos** sobre tendências de tecnologia
-- **Tutoriais práticos** de desenvolvimento
-- **Reflexões sobre carreira** e aprendizado contínuo
-- **Análises de IA** e seu impacto no desenvolvimento
-
-## Contato
-
-Fique à vontade para entrar em contato ou discutir os artigos!
-
----
-
-*Este blog é construído com Jekyll e hospedado no GitHub Pages.*
+  <h2>Contato</h2>
+  <p>Quer conversar sobre um projeto, trocar uma ideia ou apenas dizer oi? É só mandar um email para <strong>contato@qorp.com.br</strong>.</p>
+</div>

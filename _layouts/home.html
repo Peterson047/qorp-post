@@ -3,19 +3,26 @@ layout: default
 ---
 
 <div class="home">
-  <h1 class="page-heading">{{ page.title }}</h1>
-  {{ content }}
+  <div class="home-intro">
+    <h1>Qorp</h1>
+    <p>{{ content }}</p>
+  </div>
 
   {% if site.posts.size > 0 %}
-    <h2 class="post-list-heading">Artigos Recentes</h2>
+    <p class="section-label">Artigos recentes</p>
     <ul class="post-list">
       {% for post in site.posts %}
-        <li>
+        <li class="post-item">
           <a href="{{ post.url | relative_url }}" class="post-link">{{ post.title | escape }}</a>
-          <span class="post-meta">{{ post.date | date: "%d %b %Y" }}</span>
-          {% if post.categories %}
-            <span class="post-meta"> • {{ post.categories | join: ", " }}</span>
-          {% endif %}
+          <div class="post-meta">
+            <time>{{ post.date | date: "%d %b %Y" }}</time>
+            {% if post.categories.size > 0 %}
+              <span class="dot"></span>
+              {% for cat in post.categories %}
+                <span class="post-category">{{ cat }}</span>
+              {% endfor %}
+            {% endif %}
+          </div>
         </li>
       {% endfor %}
     </ul>
