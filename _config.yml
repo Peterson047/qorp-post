@@ -5,8 +5,8 @@ author: Peterson Alves
 lang: pt-BR
 
 # Configurações do GitHub Pages
-baseurl: "/qorp-post"
-url: "https://peterson047.github.io/qorp-post"
+baseurl: ""
+url: "https://qorp.com.br"
 
 # Configurações de build
 markdown: kramdown
