@@ -2,29 +2,28 @@
 layout: default
 ---
 
-<div class="home">
-  <div class="home-intro">
-    <h1>Qorp</h1>
-    <p>{{ content }}</p>
-  </div>
-
-  {% if site.posts.size > 0 %}
-    <p class="section-label">Artigos recentes</p>
-    <ul class="post-list">
-      {% for post in site.posts %}
-        <li class="post-item">
-          <a href="{{ post.url | relative_url }}" class="post-link">{{ post.title | escape }}</a>
-          <div class="post-meta">
-            <time>{{ post.date | date: "%d %b %Y" }}</time>
-            {% if post.categories.size > 0 %}
-              <span class="dot"></span>
-              {% for cat in post.categories %}
-                <span class="post-category">{{ cat }}</span>
-              {% endfor %}
-            {% endif %}
-          </div>
-        </li>
-      {% endfor %}
-    </ul>
-  {% endif %}
+<div class="hero">
+  <h1>Qorp</h1>
+  <p class="hero-tagline">{{ content }}</p>
+  <hr class="hero-rule">
 </div>
+
+{% if site.posts.size > 0 %}
+  <p class="section-heading">Últimos artigos</p>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li class="post-entry">
+        <a href="{{ post.url | relative_url }}" class="post-entry-title">{{ post.title | escape }}</a>
+        <div class="post-entry-meta">
+          <time>{{ post.date | date: "%d %b %Y" }}</time>
+          {% if post.categories.size > 0 %}
+            <span class="sep"></span>
+            {% for cat in post.categories %}
+              <span class="cat-tag">{{ cat }}</span>
+            {% endfor %}
+          {% endif %}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
