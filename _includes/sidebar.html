@@ -1,0 +1,25 @@
+<aside class="sidebar">
+  <div class="sidebar-inner">
+    <a href="{{ '/' | relative_url }}" class="sidebar-logo">Qorp</a>
+
+    <nav class="sidebar-nav">
+      <a href="{{ '/' | relative_url }}" class="sidebar-link{% if page.url == '/' %} is-active{% endif %}">Blog</a>
+      <a href="{{ '/servicos' | relative_url }}" class="sidebar-link{% if page.url == '/servicos/' %} is-active{% endif %}">Serviços</a>
+      <a href="{{ '/produtos' | relative_url }}" class="sidebar-link{% if page.url == '/produtos/' %} is-active{% endif %}">Produtos</a>
+      <a href="{{ '/arquivo' | relative_url }}" class="sidebar-link{% if page.url == '/arquivo/' %} is-active{% endif %}">Arquivo</a>
+      <a href="{{ '/sobre' | relative_url }}" class="sidebar-link{% if page.url == '/sobre/' %} is-active{% endif %}">Sobre</a>
+    </nav>
+
+    <div class="sidebar-bio">
+      <p>Dev, escritor, construtor de coisas.</p>
+    </div>
+
+    <div class="sidebar-contact">
+      <a href="mailto:contato@qorp.com.br" class="sidebar-email">contato@qorp.com.br</a>
+    </div>
+  </div>
+</aside>
+
+<button class="mobile-toggle" aria-label="Menu" onclick="document.querySelector('.sidebar').classList.toggle('is-open')">
+  <span></span><span></span><span></span>
+</button>

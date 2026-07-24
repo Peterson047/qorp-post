@@ -2,28 +2,74 @@
 layout: default
 ---
 
-<div class="hero">
-  <h1>Qorp</h1>
-  <p class="hero-tagline">{{ content }}</p>
-  <hr class="hero-rule">
-</div>
+<section class="home-hero">
+  <h1 class="home-hero-title">Blog</h1>
+  <p class="home-hero-desc">{{ content }}</p>
+</section>
 
 {% if site.posts.size > 0 %}
-  <p class="section-heading">Últimos artigos</p>
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li class="post-entry">
-        <a href="{{ post.url | relative_url }}" class="post-entry-title">{{ post.title | escape }}</a>
-        <div class="post-entry-meta">
-          <time>{{ post.date | date: "%d %b %Y" }}</time>
-          {% if post.categories.size > 0 %}
-            <span class="sep"></span>
-            {% for cat in post.categories %}
-              <span class="cat-tag">{{ cat }}</span>
-            {% endfor %}
-          {% endif %}
-        </div>
-      </li>
+<section class="home-featured">
+  {% assign first_post = site.posts.first %}
+  <a href="{{ first_post.url | relative_url }}" class="featured-card">
+    <span class="featured-label">Artigo em destaque</span>
+    <h2 class="featured-title">{{ first_post.title }}</h2>
+    <p class="featured-excerpt">{{ first_post.content | strip_html | truncate: 180 }}</p>
+    <div class="featured-meta">
+      <time>{{ first_post.date | date: "%d %b %Y" }}</time>
+      {% if first_post.categories.size > 0 %}
+        <span class="meta-dot"></span>
+        {% for cat in first_post.categories %}
+          <span class="pill">{{ cat }}</span>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </a>
+</section>
+
+<section class="home-posts">
+  <h2 class="section-title">Recentes</h2>
+  <div class="post-grid">
+    {% for post in site.posts limit:6 offset:1 %}
+    <a href="{{ post.url | relative_url }}" class="post-card">
+      <time class="post-card-date">{{ post.date | date: "%d/%m" }}</time>
+      <h3 class="post-card-title">{{ post.title }}</h3>
+      <div class="post-card-cats">
+        {% for cat in post.categories %}
+          <span class="pill pill--small">{{ cat }}</span>
+        {% endfor %}
+      </div>
+    </a>
     {% endfor %}
-  </ul>
+  </div>
+</section>
 {% endif %}
+
+<section class="home-services">
+  <h2 class="section-title">Serviços</h2>
+  <div class="services-row">
+    <div class="service-item">
+      <span class="service-num">01</span>
+      <h3>Desenvolvimento</h3>
+      <p>Software sob medida — web, APIs, automações.</p>
+    </div>
+    <div class="service-item">
+      <span class="service-num">02</span>
+      <h3>Consultoria</h3>
+      <p>Auditoria de código e arquitetura para equipes.</p>
+    </div>
+    <div class="service-item">
+      <span class="service-num">03</span>
+      <h3>DevOps & IA</h3>
+      <p>Infraestrutura, CI/CD e integração com LLMs.</p>
+    </div>
+  </div>
+  <a href="{{ '/servicos' | relative_url }}" class="section-link">Ver todos os serviços &rarr;</a>
+</section>
+
+<section class="home-cta">
+  <div class="cta-inner">
+    <h2>Tem um projeto?</h2>
+    <p>Me manda um email. Sem compromisso.</p>
+    <a href="mailto:contato@qorp.com.br" class="btn">Falar comigo</a>
+  </div>
+</section>
