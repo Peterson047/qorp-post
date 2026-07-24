@@ -1,0 +1,20 @@
+<div class="taskbar">
+  <div class="taskbar-left">
+    <a href="{{ '/' | relative_url }}" class="start-button">
+      <span class="win-logo"><span></span><span></span><span></span><span></span></span>
+      Qorp
+    </a>
+    <div class="taskbar-divider"></div>
+    <button class="mobile-menu-btn" onclick="document.querySelector('.taskbar-nav').classList.toggle('is-open')">☰ Menu</button>
+    <nav class="taskbar-nav">
+      <a href="{{ '/' | relative_url }}" class="taskbar-btn{% if page.url == '/' %} is-active{% endif %}">Blog</a>
+      <a href="{{ '/servicos' | relative_url }}" class="taskbar-btn{% if page.url == '/servicos/' %} is-active{% endif %}">Serviços</a>
+      <a href="{{ '/produtos' | relative_url }}" class="taskbar-btn{% if page.url == '/produtos/' %} is-active{% endif %}">Produtos</a>
+      <a href="{{ '/arquivo' | relative_url }}" class="taskbar-btn{% if page.url == '/arquivo/' %} is-active{% endif %}">Arquivo</a>
+      <a href="{{ '/sobre' | relative_url }}" class="taskbar-btn{% if page.url == '/sobre/' %} is-active{% endif %}">Sobre</a>
+    </nav>
+  </div>
+  <div class="taskbar-right">
+    <span class="taskbar-tray">🌐 qorp.com.br</span>
+  </div>
+</div>

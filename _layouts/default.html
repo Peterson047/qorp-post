@@ -10,23 +10,37 @@
   {% seo %}
 </head>
 <body>
-  {% include sidebar.html %}
+  {% include taskbar.html %}
 
-  <div class="layout">
-    <main class="main-content">
-      {{ content }}
-    </main>
+  <div class="desktop">
+    {% include sidebar.html %}
 
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <span class="footer-copy">&copy; {{ site.time | date: "%Y" }} {{ site.author }}</span>
-        <div class="footer-links">
-          <a href="{{ '/' | relative_url }}">Blog</a>
-          <a href="{{ '/sobre' | relative_url }}">Sobre</a>
-          <a href="mailto:contato@qorp.com.br">Contato</a>
+    <div class="window" style="flex:1; min-width:0;">
+      <div class="window-title">
+        <span class="window-title-text">
+          <span class="window-title-icon">📝</span>
+          {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+        </span>
+        <div class="window-controls">
+          <button class="window-btn">_</button>
+          <button class="window-btn">□</button>
+          <button class="window-btn">×</button>
         </div>
       </div>
-    </footer>
+      <div class="window-menubar">
+        <span class="menu-item">Arquivo</span>
+        <span class="menu-item">Editar</span>
+        <span class="menu-item">Exibir</span>
+      </div>
+      <div class="window-body">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+
+  <div class="statusbar">
+    <span class="statusbar-section">Pronto</span>
+    <span class="statusbar-section">{{ site.time | date: "%d/%m/%Y %H:%M" }}</span>
   </div>
 </body>
 </html>

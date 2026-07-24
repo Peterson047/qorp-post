@@ -4,16 +4,15 @@ layout: default
 
 <article class="article">
   <header class="article-header">
-    <div class="article-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d %b %Y" }}</time>
-      {% if page.categories.size > 0 %}
-        <span class="meta-dot"></span>
-        {% for cat in page.categories %}
-          <span class="pill">{{ cat }}</span>
-        {% endfor %}
-      {% endif %}
-    </div>
+    <span class="article-date">{{ page.date | date: "%d/%m/%Y" }}</span>
     <h1 class="article-title">{{ page.title }}</h1>
+    {% if page.categories.size > 0 %}
+    <div class="article-cats">
+      {% for cat in page.categories %}
+        <span class="cat-badge">{{ cat }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
   </header>
 
   <div class="article-body">
@@ -21,12 +20,10 @@ layout: default
   </div>
 
   {% if page.tags.size > 0 %}
-  <footer class="article-footer">
-    <div class="article-tags">
-      {% for tag in page.tags %}
-        <span class="tag">{{ tag }}</span>
-      {% endfor %}
-    </div>
-  </footer>
+  <div class="article-tags">
+    {% for tag in page.tags %}
+      <a href="#" class="tag">#{{ tag }}</a>
+    {% endfor %}
+  </div>
   {% endif %}
 </article>
